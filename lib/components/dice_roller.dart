@@ -9,12 +9,11 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  final randomizer = Random();
-  var currentDiceRoll = 1;
+  var currentDice = 1;
 
   void rollDice() {
     setState(() {
-      currentDiceRoll = randomizer.nextInt(6) + 1;
+      currentDice = Random().nextInt(6) + 1;
     });
   }
 
@@ -23,12 +22,12 @@ class _DiceRollerState extends State<DiceRoller> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset('assets/images/dice-$currentDiceRoll.png', width: 200),
-        const SizedBox(height: 20),
+        Image.asset('assets/images/dice-$currentDice.png', width: 200),
+        const SizedBox(height: 30),
         TextButton(
           style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
             textStyle: const TextStyle(fontSize: 28),
+            foregroundColor: Colors.white,
           ),
           onPressed: rollDice,
           child: const Text('Roll Dice'),

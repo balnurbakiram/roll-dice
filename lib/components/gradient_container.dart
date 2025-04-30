@@ -1,7 +1,5 @@
-// ignore: depend_on_referenced_packages
-import 'package:dice_roller/components/dice_roller.dart';
-import 'package:flutter/material.dart';
 import 'package:rolldice/components/dice_roller.dart';
+import 'package:flutter/material.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
